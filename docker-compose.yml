@@ -1,4 +1,3 @@
-# docker-compose.yml
 version: '3.8'
 
 services:
@@ -27,6 +26,9 @@ services:
       - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
       - SESSION_SECRET=${SESSION_SECRET}
       - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+      - NVIDIA_API_KEY=${NVIDIA_API_KEY}
+      - NVIDIA_BASE_URL=${NVIDIA_BASE_URL}
+      - NVIDIA_MODEL=${NVIDIA_MODEL}
     volumes:
       - ./server:/app
       - /app/node_modules
