@@ -1,4 +1,3 @@
-// client/src/types/index.ts
 export interface Message {
   id: string;
   role: 'user' | 'assistant' | 'system';
@@ -8,6 +7,7 @@ export interface Message {
   codeBlocks?: CodeBlock[];
   images?: GeneratedImage[];
   metadata?: MessageMetadata;
+  reasoning?: string;
 }
 
 export interface Attachment {
@@ -178,4 +178,12 @@ export interface ProjectFile {
   modified: boolean;
   isNew: boolean;
   isBinary: boolean;
+}
+
+export interface Notification {
+  id: string;
+  type: 'info' | 'success' | 'warning' | 'error';
+  title: string;
+  message: string;
+  duration?: number;
 }
